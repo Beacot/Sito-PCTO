@@ -8,7 +8,7 @@
 header {
     width: 100%;
 	display: block;
-	height: 80px;
+	height: 70px;
 	background-color: rgb(0, 102, 255);
     font-size: 50px;
     color: white;
@@ -17,7 +17,7 @@ header {
 footer {
     width: 100%;
 	display: block;
-	height: 80px;
+	height: 70px;
 	background-color: rgb(0, 102, 255);
     font-size: 50px;
     color: white;
@@ -27,9 +27,9 @@ footer {
 .leftSection {
     background-color: rgb(226, 226, 226);
     width: 20%;
-    height: 50%;
+    height: auto;
     margin-top: 5%;
-    border-radius: 0px 25px 25px 0px;
+    border-radius: 0px 15px 15px 0px;
     float: left;
     margin-bottom: 5%;
 }
@@ -39,7 +39,7 @@ footer {
     width: 20%;
     height: 50%;
     margin-top: 5%;
-    border-radius: 25px 0px 0px 25px;
+    border-radius: 15px 0px 0px 15px;
     float: right;
     margin-bottom: 5%;
 }
@@ -50,19 +50,33 @@ footer {
     background-color: rgb(226, 226, 226);
     width: 50%;
     float: left;
-    border-radius: 25px;
+    border-radius: 15px;
     margin-bottom: 5%;
+    animation-duration: 3s;
+    animation-name: slidedown;
 }
+
+@keyframes slidedown {
+    from {
+        height:inherit;
+    }
+    to {
+        height: 1000px;
+    }
+}
+
 
 .centralUpperSection {
     margin: 3%;
     background-color: rgb(226, 226, 226);
     width: auto;
     padding: 2%;
-    border-radius: 25px;
+    padding-top: 1%;
+    border-radius: 15px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
+    text-align: justify;
 }
 
 .centralLowerSection {
@@ -70,10 +84,18 @@ footer {
     background-color: rgb(226, 226, 226);
     width: auto;
     padding: 2%;
-    border-radius: 25px;
+    padding-top: 1%;
+    border-radius: 15px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
+    text-align: justify;
+}
+
+.siteImage {
+    border-radius: 15px;
+    width: 80%;
+    height: auto;
 }
 
 p {
@@ -83,4 +105,13 @@ p {
 h2 {
     font-size: x-large;
     text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
 }
