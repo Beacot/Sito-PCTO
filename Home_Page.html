@@ -2,76 +2,87 @@
     <head>
         <link rel="stylesheet" type="text/css" href="Stile_portale.css" >
         <script type="text/javascript">
-            function createSlot (){
-                //Inserts a break
-                var br = document.createElement("br");
-                var element = document.getElementById("lowerInnerSection");
-                element.appendChild(br);
-                //Creates the image
-                var tag = document.createElement("img");
-                tag.src = "Images/Albero.jpg";
-                tag.classList.add('siteImage');
-                tag.style.opacity = 0;
-                element.appendChild(tag);
-                //Inserts the creator's name
-                var tag = document.createElement("h3");
-                tag.textContent = "Ciao"
-                element.appendChild(tag);
+            function colorText(id) {
+                for (let i = 1; i < 18; i++) {
+                    document.getElementById(i).style.color = "black";
+                }
+                var text = document.getElementById(id);
+                text.style.color = "blue";
             }
         </script>
     </head>
     <body>
-        <header>Portale degli argomenti</header>
+        <header>
+            <div>
+                <img src="Images/Logo.png" class="headerLogo">
+                <h1>3BI Lavoro di PCTO</h1>
+            </div>
+        </header>
         <div class="leftSection">
             <h2>Argomenti</h2><br>
             <ul style="padding-left: 25px;">
-                <li class="pointer"><p>Geolocalizzazione</p></li><br>
-                <li class="pointer"><p>Password</p></li><br>
-                <li class="pointer"><p>Sicurezza informatica</p></li><br>
-                <li class="pointer"><p>Utilizzo dei servizi google</p></li><br>
-                <li class="pointer"><p>La Privacy</p></li><br>
-                <li class="pointer"><p>Trappole in internet</p></li><br>
-                <li class="pointer"><p>Pericoli dei social Network</p></li><br>
-                <li class="pointer"><p>Cyber bullismo</p></li><br>
-                <li class="pointer"><p>Sexting</p></li><br>
-                <li class="pointer"><p>Fake news</p></li><br>
-                <li class="pointer"><p>Perchè i social sono gratis</p></li><br>
-                <li class="pointer"><p>Significato del mi piace</p></li><br>
-                <li class="pointer"><p>Furto d'identità</p></li><br>
-                <li class="pointer"><p>Dipendenze</p></li><br>
-                <li class="pointer"><p>Web 1.0, 2.0 e 3.0</p></li><br>
-                <li class="pointer"><p>Le immagini sui social</p></li><br>
-                <li class="pointer"><p>Diffamazione e reputazione digitale</p></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="1" onclick="colorText('1')">Geolocalizzazione</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="2" onclick="colorText('2')">Password</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="3" onclick="colorText('3')">Sicurezza informatica</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="4" onclick="colorText('4')">Utilizzo dei servizi google</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="5" onclick="colorText('5')">La Privacy</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="6" onclick="colorText('6')">Trappole in internet</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="7" onclick="colorText('7')">Pericoli dei social Network</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="8" onclick="colorText('8')">Cyber bullismo</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="9" onclick="colorText('9')">Sexting</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="10" onclick="colorText('10')">Fake news</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="11" onclick="colorText('11')">Perchè i social sono gratis</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="12" onclick="colorText('12')">Significato del mi piace</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="13" onclick="colorText('13')">Furto d'identità</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="14" onclick="colorText('14')">Dipendenze</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="15" onclick="colorText('15')">Web 1.0, 2.0 e 3.0</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="16" onclick="colorText('16')">Le immagini sui social</a></li><br>
+                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="17" onclick="colorText('17')">Diffamazione e reputazione digitale</a></li><br>
             </ul>
         </div>
         <div class="centralSection" id="centralSection" style="opacity: 1;">
-            <div class="centralUpperSection">
-                <h2>Introduzione</h1><br>
+                <div class="centralUpperSection">
+                <h2>Introduzione</h2><br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam aliquam sem et tortor consequat id porta nibh venenatis. Vitae tortor condimentum lacinia quis vel eros. Montes nascetur ridiculus mus mauris vitae ultricies. Ac tincidunt vitae semper quis lectus nulla. Lacinia quis vel eros donec ac odio. Nisl nunc mi ipsum faucibus vitae aliquet. Erat pellentesque adipiscing commodo elit at. Mi bibendum neque egestas congue quisque egestas diam in. Pulvinar etiam non quam lacus suspendisse faucibus interdum. Et netus et malesuada fames ac turpis egestas integer eget. Purus faucibus ornare suspendisse sed. Eu lobortis elementum nibh tellus molestie nunc non.</p></div>
             <div class="centralLowerSection">
                 <center><div id="lowerInnerSection">
-                <h2>Siti web disponibili</h2><br>
-                <img src="Images/Sicurezza_informatica.png" class="siteImage">
-                <h3>Tommaso Durante</h3>
+                    <h2>Siti web disponibili</h2><br>
+                    <iframe src="blank.html" frameborder="0" name="corpocentrale"></iframe>
                 </div></center>
             </div>
         </div>
         <div class="rightSection" id="new">
             <h2>Componenti classe</h2><br>
             <ul style="padding-left: 25px;">
-                <li><p>Hello World!</p></li><br>
-                <li><p>Hello World!</p></li><br>
-                <li><p>Hello World!</p></li><br>
-                <li><p>Hello World!</p></li><br>
-                <li><p>Hello World!</p></li><br>
-                <li><p>Hello World!</p></li><br>
-                <li><p>Hello World!</p></li><br>
+                <li>
+                    <p>HTML e CSS:</p>
+                    <ul class="secondaryLi">
+                        <li>Boragina Davide</li>
+                        <li>Durante Tommaso</li>
+                        <li>Intriago Jackson</li>
+                        <li>Musceleanu Mihai</li>
+                        <li>Njioui Same</li>
+                        <li>Ochoa Taylor</li>
+                        <li>Gjini Stela</li>
+                    </ul>
+                </li><br>
+                <li><p>Server:</p>
+                    <ul class="secondaryLi">
+                        <li>Baghino Matteo</li>
+                        <li>Cannavacciuolo Elena</li>
+                    </ul>
+                </li><br>
+                <li><p>Riassunti:</p>
+                    <div>Gli altri</div>
+                </li><br>
             </ul>
         </div>
-        <button onclick="createSlot()">press me</button>
-        <footer>Footer</footer>
-        <script type="text/javascript">
-            const origCentralHeight = document.getElementById("centralSection").style.height;
-        </script>
+        <footer>
+            <center><div class="footerSection">
+                <img src="Images/Logo.png" class="footerLogo">
+                <p>3BI Lavoro di PCTO | Home page</p>
+                <p style="font-size: 20px">Realizzato dalla classe 3BI dell'I.I.S. Gastaldi-Abba Genova, a.s. 2021/2022</p>
+                </div></center>
+        </footer>
     </body>
 </html>
