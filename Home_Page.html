@@ -2,12 +2,21 @@
     <head>
         <link rel="stylesheet" type="text/css" href="Stile_portale.css" >
         <script type="text/javascript">
-            function colorText(id) {
+            function chooseTopic(id, numeroSiti, topic, src, creator1, creator2) {
+                //Cambia colore argomenti
                 for (let i = 1; i < 18; i++) {
                     document.getElementById(i).style.color = "black";
                 }
                 var text = document.getElementById(id);
                 text.style.color = "blue";
+                document.getElementById("topicName").innerHTML = topic;
+                document.getElementById("siteImage").src = src;
+                document.getElementById("creator1").innerHTML = creator1;
+                if (creator2 != undefined) {
+                    document.getElementById("creator2").innerHTML = creator2;
+                } else {
+                    document.getElementById("creator2").innerHTML = "";
+                }
             }
         </script>
     </head>
@@ -21,23 +30,25 @@
         <div class="leftSection">
             <h2>Argomenti</h2><br>
             <ul style="padding-left: 25px;">
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="1" onclick="colorText('1')">Geolocalizzazione</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="2" onclick="colorText('2')">Password</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="3" onclick="colorText('3')">Sicurezza informatica</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="4" onclick="colorText('4')">Utilizzo dei servizi google</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="5" onclick="colorText('5')">La Privacy</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="6" onclick="colorText('6')">Trappole in internet</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="7" onclick="colorText('7')">Pericoli dei social Network</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="8" onclick="colorText('8')">Cyber bullismo</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="9" onclick="colorText('9')">Sexting</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="10" onclick="colorText('10')">Fake news</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="11" onclick="colorText('11')">Perchè i social sono gratis</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="12" onclick="colorText('12')">Significato del mi piace</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="13" onclick="colorText('13')">Furto d'identità</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="14" onclick="colorText('14')">Dipendenze</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="15" onclick="colorText('15')">Web 1.0, 2.0 e 3.0</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="16" onclick="colorText('16')">Le immagini sui social</a></li><br>
-                <li class="topicLi"><a href="Geolocalizzazione.html" target="corpocentrale" id="17" onclick="colorText('17')">Diffamazione e reputazione digitale</a></li><br>
+                <li class="topicLi"><p id="1" onclick="chooseTopic('1', '1', 'Geolocalizzazione', 'Images/geol.png', '⋅ Labbate')" class="topicName">Geolocalizzazione</p></li><br>
+                <li class="topicLi"><p id="2" onclick="chooseTopic('2', '2', 'Password', 'Images/Password.png', '⋅ Baghino Matteo', '⋅ Camattari Matteo')" class="topicName">Password</p></li><br>
+                <li class="topicLi"><p id="3" onclick="chooseTopic('3', '2')" class="topicName">Sicurezza informatica</p></li><br>
+                <li class="topicLi"><p id="4" onclick="chooseTopic('4', '1')" class="topicName">Utilizzo dei servizi google</p></li><br>
+                <li class="topicLi"><p id="5" onclick="chooseTopic('5', '1')" class="topicName">La Privacy</p></li><br>
+                <li class="topicLi"><p id="6" onclick="chooseTopic('6', '1')" class="topicName">Trappole in internet</p></li><br>
+                <li class="topicLi"><p id="7" onclick="chooseTopic('7', '1')" class="topicName">Pericoli dei social Network</p></li><br>
+                <li class="topicLi"><p id="8" onclick="chooseTopic('8', '1')" class="topicName">Cyber bullismo</p></li><br>
+                <li class="topicLi"><p id="9" onclick="chooseTopic('9', '1')" class="topicName">Sexting</p></li><br>
+                <li class="topicLi"><p id="10" onclick="chooseTopic('10', '1')" class="topicName">Fake news</p></li><br>
+                <li class="topicLi"><p id="11" onclick="chooseTopic('11', '1')" class="topicName">Perchè i social sono gratis</p></li><br>
+                <li class="topicLi"><p id="12" onclick="chooseTopic('12', '1')" class="topicName">Significato del mi piace</p></li><br>
+                <li class="topicLi"><p id="13" onclick="chooseTopic('13', '1')" class="topicName">Furto d'identità</p></li><br>
+                <li class="topicLi"><p id="14" onclick="chooseTopic('14', '1')" class="topicName">Dipendenze</p></li><br>
+                <li class="topicLi"><p id="15" onclick="chooseTopic('15', '1')" class="topicName">Web 1.0, 2.0 e 3.0</p></li><br>
+                <li class="topicLi"><p id="16" onclick="chooseTopic('16', '1')" class="topicName">Le immagini sui social</p></li><br>
+                <li class="topicLi"><p id="17" onclick="chooseTopic('17', '1')" class="topicName">Diffamazione e reputazione digitale</p></li><br>
+                <li class="topicLi"><p id="18" onclick="chooseTopic('18', '2')" class="topicName">Hacker e cracker</p></li><br>
+                <li class="topicLi"><p id="19" onclick="chooseTopic('19', '2')" class="topicName">L'anonimato in rete</p></li><br>
             </ul>
         </div>
         <div class="centralSection" id="centralSection" style="opacity: 1;">
@@ -46,8 +57,17 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam aliquam sem et tortor consequat id porta nibh venenatis. Vitae tortor condimentum lacinia quis vel eros. Montes nascetur ridiculus mus mauris vitae ultricies. Ac tincidunt vitae semper quis lectus nulla. Lacinia quis vel eros donec ac odio. Nisl nunc mi ipsum faucibus vitae aliquet. Erat pellentesque adipiscing commodo elit at. Mi bibendum neque egestas congue quisque egestas diam in. Pulvinar etiam non quam lacus suspendisse faucibus interdum. Et netus et malesuada fames ac turpis egestas integer eget. Purus faucibus ornare suspendisse sed. Eu lobortis elementum nibh tellus molestie nunc non.</p></div>
             <div class="centralLowerSection">
                 <center><div id="lowerInnerSection">
-                    <h2>Siti web disponibili</h2><br>
-                    <iframe src="blank.html" frameborder="0" name="corpocentrale"></iframe>
+                    <h2>Siti disponibili</h2>
+                    <h3 id="topicName"></h3><br>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td id="imageSlot1" style="width: 50%;"><center><img id="siteImage" class="siteImage"></center></td>
+                            <td id="textSlot1" style="width: 50%;">
+                                <h3 id="creator1" class="slotText"></h3><br>
+                                <h3 id="creator2" class="slotText"></h3>
+                            </td>
+                        </tr>
+                    </table>
                 </div></center>
             </div>
         </div>

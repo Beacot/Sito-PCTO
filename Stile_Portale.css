@@ -49,8 +49,12 @@ footer {
     margin-bottom: 5%;
 }
 
-.topicLi :hover {
+.topicName:hover {
     color: blue !important;
+}
+
+.topicName {
+    cursor: pointer;
 }
 
 .secondaryLi {
@@ -107,6 +111,15 @@ h2 {
     text-align: center;
 }
 
+.siteImage {
+    border-radius: 15px;
+    width: 70%;
+}
+
+.slotText {
+    text-align: left;
+}
+
 .headerLogo {
     width: 60px;
     vertical-align: middle;
@@ -118,10 +131,4 @@ h2 {
 .footerLogo {
     width: 50px;
     padding-top: 5px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-size: larger;
 }
