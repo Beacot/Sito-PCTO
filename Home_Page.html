@@ -4,7 +4,7 @@
         <script type="text/javascript">
             function chooseTopic(id, numeroSiti, topic, src, creator1, creator2) {
                 //Cambia colore argomenti
-                for (let i = 1; i < 18; i++) {
+                for (let i = 1; i < 17; i++) {
                     document.getElementById(i).style.color = "black";
                 }
                 var text = document.getElementById(id);
@@ -30,25 +30,22 @@
         <div class="leftSection">
             <h2>Argomenti</h2><br>
             <ul style="padding-left: 25px;">
-                <li class="topicLi"><p id="1" onclick="chooseTopic('1', '1', 'Geolocalizzazione', 'Images/geol.png', '⋅ Labbate')" class="topicName">Geolocalizzazione</p></li><br>
-                <li class="topicLi"><p id="2" onclick="chooseTopic('2', '2', 'Password', 'Images/Password.png', '⋅ Baghino Matteo', '⋅ Camattari Matteo')" class="topicName">Password</p></li><br>
-                <li class="topicLi"><p id="3" onclick="chooseTopic('3', '2')" class="topicName">Sicurezza informatica</p></li><br>
-                <li class="topicLi"><p id="4" onclick="chooseTopic('4', '1')" class="topicName">Utilizzo dei servizi google</p></li><br>
-                <li class="topicLi"><p id="5" onclick="chooseTopic('5', '1')" class="topicName">La Privacy</p></li><br>
-                <li class="topicLi"><p id="6" onclick="chooseTopic('6', '1')" class="topicName">Trappole in internet</p></li><br>
-                <li class="topicLi"><p id="7" onclick="chooseTopic('7', '1')" class="topicName">Pericoli dei social Network</p></li><br>
-                <li class="topicLi"><p id="8" onclick="chooseTopic('8', '1')" class="topicName">Cyber bullismo</p></li><br>
-                <li class="topicLi"><p id="9" onclick="chooseTopic('9', '1')" class="topicName">Sexting</p></li><br>
-                <li class="topicLi"><p id="10" onclick="chooseTopic('10', '1')" class="topicName">Fake news</p></li><br>
-                <li class="topicLi"><p id="11" onclick="chooseTopic('11', '1')" class="topicName">Perchè i social sono gratis</p></li><br>
-                <li class="topicLi"><p id="12" onclick="chooseTopic('12', '1')" class="topicName">Significato del mi piace</p></li><br>
-                <li class="topicLi"><p id="13" onclick="chooseTopic('13', '1')" class="topicName">Furto d'identità</p></li><br>
-                <li class="topicLi"><p id="14" onclick="chooseTopic('14', '1')" class="topicName">Dipendenze</p></li><br>
-                <li class="topicLi"><p id="15" onclick="chooseTopic('15', '1')" class="topicName">Web 1.0, 2.0 e 3.0</p></li><br>
-                <li class="topicLi"><p id="16" onclick="chooseTopic('16', '1')" class="topicName">Le immagini sui social</p></li><br>
-                <li class="topicLi"><p id="17" onclick="chooseTopic('17', '1')" class="topicName">Diffamazione e reputazione digitale</p></li><br>
-                <li class="topicLi"><p id="18" onclick="chooseTopic('18', '2')" class="topicName">Hacker e cracker</p></li><br>
-                <li class="topicLi"><p id="19" onclick="chooseTopic('19', '2')" class="topicName">L'anonimato in rete</p></li><br>
+                <li class="topicLi"><p id="1" onclick="chooseTopic('1', '1', 'Geolocalizzazione', 'Images/geol.png', '⋅ Labbate Simon')" class="topicName">La geolocalizzazione</p></li><br>
+                <li class="topicLi"><p id="2" onclick="chooseTopic('2', '2', 'Password', 'Images/Password.png', '⋅ Baghino Matteo', '⋅ Camattari Matteo')" class="topicName">Le password</p></li><br>
+                <li class="topicLi"><p id="3" onclick="chooseTopic('3', '2', 'Sicurezza Informatica', 'Images/SicurezzaInf.png', '⋅ Durante Tommaso', '⋅ Rorato Alessia')" class="topicName">La sicurezza informatica</p></li><br>
+                <li class="topicLi"><p id="4" onclick="chooseTopic('4', '1', 'Utilizzo dei servizi google', 'Images/Google.png', '⋅ Intriago Jackson')" class="topicName">L'utilizzo dei servizi google</p></li><br>
+                <li class="topicLi"><p id="5" onclick="chooseTopic('5', '1', 'Le trappole in internet', 'Images/TrappoleInt.png', '⋅ Cannavvaciuolo Elena')" class="topicName">Le trappole in internet</p></li><br>
+                <li class="topicLi"><p id="6" onclick="chooseTopic('6', '1', 'I pericoli dei social network', 'Images/SocialMedia.png', '⋅ Janko Entoni')" class="topicName">I pericoli dei social Network</p></li><br>
+                <li class="topicLi"><p id="7" onclick="chooseTopic('7', '1', 'Il cyberbullismo', 'Images/Cyberbullismo.png', '⋅ Gjini Stela')" class="topicName">Il cyberbullismo</p></li><br>
+                <li class="topicLi"><p id="8" onclick="chooseTopic('8', '1', 'Le fake news', 'Images/FakeNews.png', '⋅ Tarantino Luca')" class="topicName">Le fake news</p></li><br>
+                <li class="topicLi"><p id="9" onclick="chooseTopic('9', '1', 'Perché i social sono gratis', 'Images/SocialGratis.png', '⋅ Santamaria Adriano')" class="topicName">Perché i social sono gratis</p></li><br>
+                <li class="topicLi"><p id="10" onclick="chooseTopic('10', '1', 'Il furto di identità', 'Images/FurtoIdentita.png', '⋅ Espinoza Denis')" class="topicName">Il furto d'identità</p></li><br>
+                <li class="topicLi"><p id="11" onclick="chooseTopic('11', '1', 'Le dipendenze', 'Images/Dipendenze.png', '⋅ Cagua Kriss')" class="topicName">Le dipendenze</p></li><br>
+                <li class="topicLi"><p id="12" onclick="chooseTopic('12', '1', 'Il web 1.0, 2.0 e 3.0', 'Images/Web3.png', '⋅ Boragina Davide')" class="topicName">Il web 1.0, 2.0 e 3.0</p></li><br>
+                <li class="topicLi"><p id="13" onclick="chooseTopic('13', '1', 'Le immagini sui social', 'Images/ImmaginiSocial.png', '⋅ Perugi Davide')" class="topicName">Le immagini sui social</p></li><br>
+                <li class="topicLi"><p id="14" onclick="chooseTopic('14', '1', 'Diffamazione e reputazione digitale', ' Images/Diffamazione.png', '⋅ Zavala Adrian')" class="topicName">Diffamazione e reputazione digitale</p></li><br>
+                <li class="topicLi"><p id="15" onclick="chooseTopic('15', '2', 'Gli hacker e i cracker', 'Images/Hacker.png', '⋅ Di Sario Matteo', 'Gardella Mario')" class="topicName">Gli hacker e i cracker</p></li><br>
+                <li class="topicLi"><p id="16" onclick="chooseTopic('16', '2', 'Anonimato in rete', 'Images/Anonimato.png', '⋅ Musceleanu Mihai', '⋅ Same Njioui')" class="topicName">L'anonimato in rete</p></li><br>
             </ul>
         </div>
         <div class="centralSection" id="centralSection" style="opacity: 1;">

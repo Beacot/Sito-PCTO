@@ -114,6 +114,7 @@ h2 {
 .siteImage {
     border-radius: 15px;
     width: 70%;
+    max-height: 300px;
 }
 
 .slotText {
