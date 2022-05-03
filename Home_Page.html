@@ -3,7 +3,7 @@
         <link rel="stylesheet" type="text/css" href="Stile_portale.css" >
         <script type="text/javascript">      
             //funzione argomento
-            function argomento(id, topic, image, autore1, autore2, intro) {
+            function argomento(id, topic, image, autore1, autore2, intro, sito1, sito2) {
                 this.id = id;
                 this.topic = topic;
                 this.image = image;
@@ -13,20 +13,19 @@
             }
             
             //lista degli oggetti
-            geolocalizzazione = new argomento('1', 'Geolocalizzazione', 'Images/geol.png', '⋅ Labbate Simon', '');
-            password = new argomento ('2',  'Password', 'Images/Password.png', '⋅ Baghino Matteo', '⋅ Camattari Matteo');
-            sicurezzaInf = new argomento('3', 'Sicurezza Informatica', 'Images/SicurezzaInf.png', '⋅ Durante Tommaso', '⋅ Rorato Alessia', 'Summaries/IntroSicInf.html');
-            servGoogle = new argomento ('4', 'Utilizzo dei servizi google', 'Images/Google.png', '⋅ Intriago Jackson', '', 'Summaries/IntroServGoogle.html');
-            trappoleInternet = new argomento ('5', 'Le trappole in internet', 'Images/TrappoleInt.png', '⋅ Cannavvaciuolo Elena', '', 'Summaries/IntroTrappoleInternet.html');
-            pericoliSocial = new argomento ('6', 'I pericoli dei social network', 'Images/SocialMedia.png', '⋅ Janko Entoni', '', 'Summaries/IntroPericoli.html');
-            furtoIdentita = new argomento('7', 'Il Furto di identità', 'Images/Furtoidentita.png', '. Espinoza Denis', '', 'Summaries/IntroFurtoid.html' );
-            dipendenzeSocial = new argomento('8', 'Le dipendenze', 'Images/Dipendenze.png', 'Cagua John', '', 'Summaries/IntroDipendenze.html');
-            immaginiSocial = new argomento('9', 'Le immagini sui Social', 'Images/ImmaginiSocial.png', 'Perugi Davide', '', 'Summaries/IntroimmSocial.html');
-            hackerCracker = new argomento('10', 'Gli hacker e i cracker', 'Images/Hacker.png', 'Di Sario Matteo', '', 'Summaries/IntroHackCrack.html');
+            password = new argomento ('1',  'Password', 'Images/Password.png', 'Baghino Matteo', 'Camattari Matteo');
+            sicurezzaInf = new argomento('2', 'Sicurezza Informatica', 'Images/SicurezzaInf.png', 'Durante Tommaso', 'Rorato Alessia', 'Summaries/IntroSicInf.html', );
+            servGoogle = new argomento ('3', 'Utilizzo dei servizi google', 'Images/Google.png', 'Intriago Jackson', '', 'Summaries/IntroServGoogle.html');
+            trappoleInternet = new argomento ('4', 'Le trappole in internet', 'Images/TrappoleInt.png', 'Cannavvaciuolo Elena', '', 'Summaries/IntroTrappoleInternet.html');
+            pericoliSocial = new argomento ('5', 'I pericoli dei social network', 'Images/SocialMedia.png', 'Janko Entoni', '', 'Summaries/IntroPericoli.html');
+            furtoIdentita = new argomento('9', 'Il Furto di identità', 'Images/Furtoidentita.png', 'Espinoza Denis', '', 'Summaries/IntroFurtoid.html', 'Sites/furtoIdentita.html');
+            dipendenzeSocial = new argomento('10', 'Le dipendenze', 'Images/Dipendenze.png', 'Cagua John', '', 'Summaries/IntroDipendenze.html');
+            immaginiSocial = new argomento('12', 'Le immagini sui Social', 'Images/ImmaginiSocial.png', 'Perugi Davide', '', 'Summaries/IntroimmSocial.html');
+            hackerCracker = new argomento('14', 'Gli hacker e i cracker', 'Images/Hacker.png', 'Di Sario Matteo', '', 'Summaries/IntroHackCrack.html');
 
             function chooseTopic (obj) {
                 //Cambia colore argomenti
-                for (let i = 1; i < 17; i++) {
+                for (let i = 1; i < 16; i++) {
                     document.getElementById(i).style.color = "black";
                 }
                 var text = document.getElementById(obj['id']);
@@ -40,6 +39,12 @@
                     document.getElementById("creator2").innerHTML = "";
                 }
                 document.getElementById("introduzione").src = obj['intro'];
+                var sito1 = obj['sito1'];
+                var sito2 = obj['sito2'];
+            }
+            
+            function redirect1() {
+                location.href = sito1;
             }
         </script>
     </head>
@@ -53,26 +58,25 @@
         <div class="leftSection">
             <h2>Argomenti</h2><br>
             <ul style="padding-left: 25px;">
-                <li class="topicLi"><p id="1" onclick="chooseTopic(geolocalizzazione)" class="topicName">La geolocalizzazione</p></li><br>
-                <li class="topicLi"><p id="2" onclick="chooseTopic(password)" class="topicName">Le password</p></li><br>
-                <li class="topicLi"><p id="3" onclick="chooseTopic(sicurezzaInf)" class="topicName">La sicurezza informatica</p></li><br>
-                <li class="topicLi"><p id="4" onclick="chooseTopic(servGoogle)" class="topicName">L'utilizzo dei servizi google</p></li><br>
-                <li class="topicLi"><p id="5" onclick="chooseTopic(trappoleInternet)" class="topicName">Le trappole in internet</p></li><br>
-                <li class="topicLi"><p id="6" onclick="chooseTopic(pericoliSocial)" class="topicName">I pericoli dei social Network</p></li><br>
-                <li class="topicLi"><p id="7" onclick="chooseTopic('7', '1', 'Il cyberbullismo', 'Images/Cyberbullismo.png', '⋅ Gjini Stela')" class="topicName">Il cyberbullismo</p></li><br>
-                <li class="topicLi"><p id="8" onclick="chooseTopic('8', '1', 'Le fake news', 'Images/FakeNews.png', '⋅ Tarantino Luca')" class="topicName">Le fake news</p></li><br>
-                <li class="topicLi"><p id="9" onclick="chooseTopic('9', '1', 'Perché i social sono gratis', 'Images/SocialGratis.png', '⋅ Santamaria Adriano')" class="topicName">Perché i social sono gratis</p></li><br>
-                <li class="topicLi"><p id="10" onclick="chooseTopic(furtoIdentita)" class="topicName">Il furto d'identità</p></li><br>
-                <li class="topicLi"><p id="11" onclick="chooseTopic(dipendenzeSocial)" class="topicName">Le dipendenze</p></li><br>
-                <li class="topicLi"><p id="12" onclick="chooseTopic()" class="topicName">Il web 1.0, 2.0 e 3.0</p></li><br>
-                <li class="topicLi"><p id="13" onclick="chooseTopic(immaginiSocial)" class="topicName">Le immagini sui social</p></li><br>
-                <li class="topicLi"><p id="14" onclick="chooseTopic('14', '1', 'Diffamazione e reputazione digitale', ' Images/Diffamazione.png', '⋅ Zavala Adrian')" class="topicName">Diffamazione e reputazione digitale</p></li><br>
-                <li class="topicLi"><p id="15" onclick="chooseTopic(hackerCracker)" class="topicName">Gli hacker e i cracker</p></li><br>
-                <li class="topicLi"><p id="16" onclick="chooseTopic('16', '2', 'Anonimato in rete', 'Images/Anonimato.png', '⋅ Musceleanu Mihai', '⋅ Same Njioui')" class="topicName">L'anonimato in rete</p></li><br>
+                <li class="topicLi"><p id="1" onclick="chooseTopic(password)" class="topicName">Le password</p></li><br>
+                <li class="topicLi"><p id="2" onclick="chooseTopic(sicurezzaInf)" class="topicName">La sicurezza informatica</p></li><br>
+                <li class="topicLi"><p id="3" onclick="chooseTopic(servGoogle)" class="topicName">L'utilizzo dei servizi google</p></li><br>
+                <li class="topicLi"><p id="4" onclick="chooseTopic(trappoleInternet)" class="topicName">Le trappole in internet</p></li><br>
+                <li class="topicLi"><p id="5" onclick="chooseTopic(pericoliSocial)" class="topicName">I pericoli dei social Network</p></li><br>
+                <li class="topicLi"><p id="6" onclick="chooseTopic('7', '1', 'Il cyberbullismo', 'Images/Cyberbullismo.png', '⋅ Gjini Stela')" class="topicName">Il cyberbullismo</p></li><br>
+                <li class="topicLi"><p id="7" onclick="chooseTopic('8', '1', 'Le fake news', 'Images/FakeNews.png', '⋅ Tarantino Luca')" class="topicName">Le fake news</p></li><br>
+                <li class="topicLi"><p id="8" onclick="chooseTopic('9', '1', 'Perché i social sono gratis', 'Images/SocialGratis.png', '⋅ Santamaria Adriano')" class="topicName">Perché i social sono gratis</p></li><br>
+                <li class="topicLi"><p id="9" onclick="chooseTopic(furtoIdentita)" class="topicName">Il furto d'identità</p></li><br>
+                <li class="topicLi"><p id="10" onclick="chooseTopic(dipendenzeSocial)" class="topicName">Le dipendenze</p></li><br>
+                <li class="topicLi"><p id="11" onclick="chooseTopic()" class="topicName">Il web 1.0, 2.0 e 3.0</p></li><br>
+                <li class="topicLi"><p id="12" onclick="chooseTopic(immaginiSocial)" class="topicName">Le immagini sui social</p></li><br>
+                <li class="topicLi"><p id="13" onclick="chooseTopic('14', '1', 'Diffamazione e reputazione digitale', ' Images/Diffamazione.png', '⋅ Zavala Adrian')" class="topicName">Diffamazione e reputazione digitale</p></li><br>
+                <li class="topicLi"><p id="14" onclick="chooseTopic(hackerCracker)" class="topicName">Gli hacker e i cracker</p></li><br>
+                <li class="topicLi"><p id="15" onclick="chooseTopic('16', '2', 'Anonimato in rete', 'Images/Anonimato.png', '⋅ Musceleanu Mihai', '⋅ Same Njioui')" class="topicName">L'anonimato in rete</p></li><br>
             </ul>
         </div>
         <div class="centralSection" id="centralSection" style="opacity: 1;">
-                <div class="centralUpperSection">
+                <div class="centralUpperSection" >
                 <center><h2>Introduzione</h2><br>
                 <h3 id="topicName"></h3><br>
                 <iframe src="" frameborder="0" id="introduzione" class="introductionFrame"></iframe>
@@ -85,8 +89,10 @@
                         <tr>
                             <td id="imageSlot1" style="width: 50%;"><center><img id="siteImage" class="siteImage"></center></td>
                             <td id="textSlot1" style="width: 50%;">
-                                <h3 id="creator1" class="slotText"></h3><br>
-                                <h3 id="creator2" class="slotText"></h3>
+                                <center>
+                                <div class="creatorSpace"><h3 id="creator1" class="slotText" onclick="redirect1()"></h3></div>
+                                    <div class="creatorSpace"><h3 id="creator2" class="slotText"></h3></div>
+                                </center>
                             </td>
                         </tr>
                     </table>
