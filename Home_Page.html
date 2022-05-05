@@ -13,15 +13,21 @@
             }
             
             //lista degli oggetti
-            password = new argomento ('1',  'Password', 'Images/Password.png', 'Baghino Matteo', 'Camattari Matteo');
-            sicurezzaInf = new argomento('2', 'Sicurezza Informatica', 'Images/SicurezzaInf.png', 'Durante Tommaso', 'Rorato Alessia', 'Summaries/IntroSicInf.html', );
+            password = new argomento ('1',  'Password', 'Images/Password.png', 'Baghino Matteo', 'Camattari Matteo', 'Summaries/IntroPassword.html');
+            sicurezzaInf = new argomento('2', 'Sicurezza Informatica', 'Images/SicurezzaInf.png', 'Durante Tommaso', 'Rorato Alessia', 'Summaries/IntroSicInf.html');
             servGoogle = new argomento ('3', 'Utilizzo dei servizi google', 'Images/Google.png', 'Intriago Jackson', '', 'Summaries/IntroServGoogle.html');
             trappoleInternet = new argomento ('4', 'Le trappole in internet', 'Images/TrappoleInt.png', 'Cannavvaciuolo Elena', '', 'Summaries/IntroTrappoleInternet.html');
             pericoliSocial = new argomento ('5', 'I pericoli dei social network', 'Images/SocialMedia.png', 'Janko Entoni', '', 'Summaries/IntroPericoli.html');
-            furtoIdentita = new argomento('9', 'Il Furto di identità', 'Images/Furtoidentita.png', 'Espinoza Denis', '', 'Summaries/IntroFurtoid.html', 'Sites/furtoIdentita.html');
-            dipendenzeSocial = new argomento('10', 'Le dipendenze', 'Images/Dipendenze.png', 'Cagua John', '', 'Summaries/IntroDipendenze.html');
-            immaginiSocial = new argomento('12', 'Le immagini sui Social', 'Images/ImmaginiSocial.png', 'Perugi Davide', '', 'Summaries/IntroimmSocial.html');
-            hackerCracker = new argomento('14', 'Gli hacker e i cracker', 'Images/Hacker.png', 'Di Sario Matteo', '', 'Summaries/IntroHackCrack.html');
+            fakenews = new argomento('6', '', 'Images/FakeNews.png', 'Tarantino Luca', '', 'Summaries/IntroFakeNews.html');
+            socialgratis = new argomento('7', '', 'Images/SocialGratis.png', 'Santamaria Adriano', '', 'Summaries/IntroSocialGratis.html');
+            furtoIdentita = new argomento('8', 'Il Furto di identità', 'Images/Furtoidentita.png', 'Espinoza Denis', '', 'Summaries/IntroFurtoid.html', 'Sites/furtoIdentita.html');
+            dipendenzeSocial = new argomento('9', 'Le dipendenze', 'Images/Dipendenze.png', 'Cagua John', '', 'Summaries/IntroDipendenze.html');
+            web = new argomento('10', 'Il Web 1.0, 2.0 e 3.0', 'Images/Web3.png', 'Boragina Davide', '', 'Summaries/IntroWeb.html');
+            immaginiSocial = new argomento('11', 'Le immagini sui Social', 'Images/ImmaginiSocial.png', 'Perugi Davide', '', 'Summaries/IntroimmSocial.html');
+            diffamazione = new argomento('12',  'Images/Diffamazione.png', 'Zavala Adrian', '', 'Summaries/IntroDiffamazione.html');
+            hackerCracker = new argomento('13', 'Gli hacker e i cracker', 'Images/Hacker.png', 'Di Sario Matteo', '', 'Summaries/IntroHackCrack.html');
+           
+
 
             function chooseTopic (obj) {
                 //Cambia colore argomenti
@@ -64,13 +70,13 @@
                 <li class="topicLi"><p id="4" onclick="chooseTopic(trappoleInternet)" class="topicName">Le trappole in internet</p></li><br>
                 <li class="topicLi"><p id="5" onclick="chooseTopic(pericoliSocial)" class="topicName">I pericoli dei social Network</p></li><br>
                 <li class="topicLi"><p id="6" onclick="chooseTopic('7', '1', 'Il cyberbullismo', 'Images/Cyberbullismo.png', '⋅ Gjini Stela')" class="topicName">Il cyberbullismo</p></li><br>
-                <li class="topicLi"><p id="7" onclick="chooseTopic('8', '1', 'Le fake news', 'Images/FakeNews.png', '⋅ Tarantino Luca')" class="topicName">Le fake news</p></li><br>
-                <li class="topicLi"><p id="8" onclick="chooseTopic('9', '1', 'Perché i social sono gratis', 'Images/SocialGratis.png', '⋅ Santamaria Adriano')" class="topicName">Perché i social sono gratis</p></li><br>
+                <li class="topicLi"><p id="7" onclick="chooseTopic(fakenews)" class="topicName">Le fake news</p></li><br>
+                <li class="topicLi"><p id="8" onclick="chooseTopic(socialgratis)" class="topicName">Perché i social sono gratis</p></li><br>
                 <li class="topicLi"><p id="9" onclick="chooseTopic(furtoIdentita)" class="topicName">Il furto d'identità</p></li><br>
                 <li class="topicLi"><p id="10" onclick="chooseTopic(dipendenzeSocial)" class="topicName">Le dipendenze</p></li><br>
-                <li class="topicLi"><p id="11" onclick="chooseTopic()" class="topicName">Il web 1.0, 2.0 e 3.0</p></li><br>
+                <li class="topicLi"><p id="11" onclick="chooseTopic(web)" class="topicName">Il web 1.0, 2.0 e 3.0</p></li><br>
                 <li class="topicLi"><p id="12" onclick="chooseTopic(immaginiSocial)" class="topicName">Le immagini sui social</p></li><br>
-                <li class="topicLi"><p id="13" onclick="chooseTopic('14', '1', 'Diffamazione e reputazione digitale', ' Images/Diffamazione.png', '⋅ Zavala Adrian')" class="topicName">Diffamazione e reputazione digitale</p></li><br>
+                <li class="topicLi"><p id="13" onclick="chooseTopic(diffamazione)" class="topicName">Diffamazione e reputazione digitale</p></li><br>
                 <li class="topicLi"><p id="14" onclick="chooseTopic(hackerCracker)" class="topicName">Gli hacker e i cracker</p></li><br>
                 <li class="topicLi"><p id="15" onclick="chooseTopic('16', '2', 'Anonimato in rete', 'Images/Anonimato.png', '⋅ Musceleanu Mihai', '⋅ Same Njioui')" class="topicName">L'anonimato in rete</p></li><br>
             </ul>
